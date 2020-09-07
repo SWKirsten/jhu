@@ -1,0 +1,107 @@
+
+/********** Base styles **********/
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 175%;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.menu_card {
+  border: 1px solid black;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  background-color: #3A668A;
+  border-radius: 5px;
+  position: relative;
+  /*Using position as indicated in Assignment Point 12. However there is a cleaner alternative. 
+    Alternative: Card_title float right, card_text clear right 
+    That would allow for a different default font size and the design would adjust accordingly.*/
+}
+
+.card_title {
+  position: absolute; /*Float alternative (see Line 21 above): Replace with float: right;*/
+  right: 0px;
+  border-left: 1px solid black; /*Fit snug into corner without double lines*/
+  border-bottom: 1px solid black; /*Fit snug into corner without double lines*/
+  width: 150px;
+  font-size: 125%;
+  font-weight: bold;
+  text-align: center;
+  border-bottom-left-radius: 5px;
+  box-shadow: 0px 0px 3px black;
+}
+
+.card_title:hover {
+  box-shadow: 0 0 5px rgba(255, 255, 255, 1);
+  transition: all 75ms ease-out;  
+}
+
+.card_text {
+  height: 100px;
+  color: white;
+  clear: right;
+  padding: 10px;
+  margin-top: 23px; /*Float alternative (see Line 21 above): Replace with clear: right;*/
+  text-shadow: 0px 0px 3px black
+}
+
+/* ------------------------------------------------------------------------------------*/
+
+
+/* Simple Responsive Framework. */
+.row {
+  margin-left: -10px;
+  width: 100%px;
+  
+  }
+
+/********** Large devices only **********/
+@media (min-width: 992px) {
+    .col-lg-4 {
+    width: 33.33%;
+    float: left;
+  }
+  
+}
+
+/********** Medium devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+  .col-md-6 {
+    width: 50%;
+    float: left;
+  }
+  .col-md-12 {
+    width: 100%;
+    float: left;
+  }
+}
+
+/********** Small devices only **********/
+/*Not necessary
+@media (max-width: 767px) {
+  .col-sm-12 {
+    width: 100%;
+    float: left;
+  }
+}
+*/
+
+/* ------------------------------------------------------------------------------------*/
+
+
+/********** Card_title ID Styles ***************/
+#Chicken {
+  background-color: #F5DEB3;
+}
+#Beef {
+  background-color: #795548;
+}
+#Sushi {
+  background-color: #F091AC;
+}
